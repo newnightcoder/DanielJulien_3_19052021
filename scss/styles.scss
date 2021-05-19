@@ -120,7 +120,7 @@ header {
 
 .intro {
   height: 100%;
-  padding: 60px 20px;
+  padding: 40px 20px 60px;
   @include flex-column-center();
   align-items: flex-start;
   justify-content: space-evenly;
@@ -200,7 +200,7 @@ header {
 .restaurants {
   height: 100%;
   background-color: #efefef;
-  padding: 50px 20px 65px;
+  padding: 40px 20px 65px;
   //   border: 1px solid red;
   @include flex-column-center();
   align-items: flex-start;
@@ -218,6 +218,8 @@ header {
     background-color: white;
     border-radius: 20px;
     position: relative;
+    text-decoration: none;
+    color: black;
     box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
     -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
     -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);

@@ -99,7 +99,7 @@ header .location:hover {
 
 .intro {
   height: 100%;
-  padding: 60px 20px;
+  padding: 40px 20px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,7 +176,7 @@ header .location:hover {
 .restaurants {
   height: 100%;
   background-color: #efefef;
-  padding: 50px 20px 65px;
+  padding: 40px 20px 65px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,6 +198,8 @@ header .location:hover {
   background-color: white;
   border-radius: 20px;
   position: relative;
+  text-decoration: none;
+  color: black;
   box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
