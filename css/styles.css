@@ -19,6 +19,7 @@ body {
 .body__container {
   height: inherit;
   width: inherit;
+  min-width: 280px;
 }
 
 ul {
@@ -117,12 +118,16 @@ header .location:hover {
 }
 .intro__info--item {
   width: 100%;
+  min-width: 280px;
+  max-width: 800px;
   border-radius: 30px;
   background-color: #efefef;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  white-space: nowrap;
   padding: 30px;
+  position: relative;
   box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
@@ -153,7 +158,7 @@ header .location:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateX(50%);
+  transform: translateX(-50%);
 }
 .intro__info--item:nth-child(2)::before {
   content: "2";
@@ -188,6 +193,7 @@ header .location:hover {
 }
 .restaurants__card {
   width: 100%;
+  max-width: 400px;
   height: 250px;
   background-color: white;
   border-radius: 20px;
