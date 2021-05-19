@@ -1,0 +1,287 @@
+$purple-primary: #9356dc;
+$pink-primary: #ff79da;
+$turquoise-primary: #99e2d0;
+$font-title: "Shrikhand", cursive;
+$font-text: "Roboto", sans-serif;
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  font-family: $font-text;
+}
+
+.body__container {
+  height: inherit;
+  width: inherit;
+  //   border: 2px solid black;
+}
+ul {
+  list-style-type: none;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                                 HEADER
+//////////////////////////////////////////////////////////////////////////////
+h1 {
+  width: 100vw;
+  height: 70px;
+  font-family: $font-title;
+  text-align: center;
+  padding: 10px 10px 0;
+  box-shadow: 0 5px 5px -5px #333;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 20;
+  //   border: 1px solid red;
+}
+header {
+  .location {
+    height: 100%;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    background-color: lightgray;
+    padding: 15px;
+    &:hover {
+      cursor: text;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                                  HERO
+//////////////////////////////////////////////////////////////////////////////
+.hero {
+  height: 270px;
+  min-height: 240px;
+  @include flex-column-center();
+  justify-content: space-evenly;
+  gap: 30px;
+  background-color: #efefef;
+  padding: 40px 0 60px;
+
+  &__text--container {
+    height: 100%;
+    width: inherit;
+  }
+  &__title {
+    @include flex-column-center();
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  &__button {
+    padding: 15px 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(160deg, $pink-primary, $purple-primary);
+    box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+    -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+    -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                                  INTRO
+//////////////////////////////////////////////////////////////////////////////
+
+.intro {
+  height: 100%;
+  padding: 60px 20px;
+  @include flex-column-center();
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 30px;
+
+  &__info {
+    height: 100%;
+    width: 100%;
+    @include flex-column-center();
+    justify-content: space-evenly;
+    // padding-left: 12.5px;
+    // border: 1px solid red;
+    gap: 20px;
+    &--item {
+      width: 100%;
+      border-radius: 30px;
+      background-color: #efefef;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 30px;
+      box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+      -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+      -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding-left: 10px;
+        i {
+          font-size: 1.5rem;
+          color: dimgrey;
+        }
+        p {
+          font-weight: 500;
+        }
+      }
+      &::before {
+        content: "1";
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: $purple-primary;
+        color: white;
+        position: absolute;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(50%);
+      }
+    }
+    &--item:nth-child(2)::before {
+      content: "2";
+    }
+    &--item:nth-child(3)::before {
+      content: "3";
+    }
+    &--item:nth-child(3) {
+      background-color: #e6e6fa;
+      i {
+        color: $purple-primary;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                                RESTAURANTS
+//////////////////////////////////////////////////////////////////////////////
+
+.restaurants {
+  height: 100%;
+  background-color: #efefef;
+  padding: 50px 20px 65px;
+  //   border: 1px solid red;
+  @include flex-column-center();
+  align-items: flex-start;
+  gap: 20px;
+  &__cards--container {
+    height: 100%;
+    width: 100%;
+    @include flex-column-center();
+    gap: 20px;
+  }
+  &__card {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+    -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+    -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+    &:hover {
+      cursor: pointer;
+    }
+    &--img-container {
+      height: 69%;
+      width: 100%;
+      img {
+        width: inherit;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    }
+    &--description {
+      padding: 10px 15px;
+      h3 {
+        line-height: 1.9rem;
+      }
+      p {
+        font-weight: 300;
+      }
+    }
+    i {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      font-size: 1.5rem;
+      //   background: red;
+    }
+    span {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background-color: $turquoise-primary;
+      color: green;
+      font-size: 0.9rem;
+      padding: 10px 15px;
+      border-radius: 3px;
+      z-index: 10;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                                FOOTER
+//////////////////////////////////////////////////////////////////////////////
+
+footer {
+  color: white;
+  background-color: rgb(39, 39, 39);
+  padding: 20px 20px 30px;
+  .footer__container {
+    height: 200px;
+    @include flex-column-center();
+    align-items: flex-start;
+    justify-content: space-evenly;
+    h2 {
+      font-family: $font-title;
+      font-size: 1.25rem;
+    }
+    ul {
+      li {
+        display: flex;
+        gap: 12px;
+        padding: 5px 0;
+      }
+    }
+  }
+}
