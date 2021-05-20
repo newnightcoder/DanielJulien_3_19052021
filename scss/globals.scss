@@ -10,6 +10,12 @@ $font-text: "Roboto", sans-serif;
   align-items: center;
 }
 
+@mixin box-shadow {
+  box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+}
+
 *,
 *::before,
 *::after {

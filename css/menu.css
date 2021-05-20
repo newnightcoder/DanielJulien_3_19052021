@@ -180,6 +180,27 @@ main .restaurant__menu--item {
   background-color: white;
   border-radius: 20px;
   padding: 15px;
+  opacity: 0;
+  transform: translateY(15px);
+  box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  animation: fade 1000ms forwards;
+}
+main .restaurant__menu--item:nth-child(2) {
+  animation-delay: 200ms;
+}
+main .restaurant__menu--item:nth-child(3) {
+  animation-delay: 400ms;
+}
+main .restaurant__menu--item:nth-child(4) {
+  animation-delay: 600ms;
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 main .restaurant__menu--item--details {
   display: flex;

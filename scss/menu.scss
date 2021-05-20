@@ -80,6 +80,25 @@ main {
       background-color: white;
       border-radius: 20px;
       padding: 15px;
+      opacity: 0;
+      transform: translateY(15px);
+      @include globals.box-shadow();
+      animation: fade 1000ms forwards;
+      &:nth-child(2) {
+        animation-delay: 200ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 400ms;
+      }
+      &:nth-child(4) {
+        animation-delay: 600ms;
+      }
+      @keyframes fade {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
       &--details {
         display: flex;
         align-items: center;

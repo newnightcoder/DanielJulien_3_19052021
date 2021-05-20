@@ -156,9 +156,7 @@ header {
       white-space: nowrap;
       padding: 30px;
       position: relative;
-      box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-      -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-      -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+      @include globals.box-shadow();
       div {
         width: 100%;
         display: flex;
@@ -230,9 +228,7 @@ header {
     position: relative;
     text-decoration: none;
     color: black;
-    box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-    -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-    -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+    @include globals.box-shadow();
     &:hover {
       cursor: pointer;
     }
