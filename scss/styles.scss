@@ -3,7 +3,79 @@
 //////////////////////////////////////////////////////////////////////////////
 //                                 HEADER
 //////////////////////////////////////////////////////////////////////////////
-
+.loader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 200;
+  background-color: lightgray;
+  animation: 300ms disappear 2500ms forwards;
+  @include globals.flex-column-center();
+  justify-content: center;
+  gap: 20px;
+  @keyframes disappear {
+    to {
+      opacity: 0;
+      z-index: -10;
+    }
+  }
+  &__title {
+    font-family: globals.$font-title;
+    font-size: 3rem;
+    opacity: 0;
+    animation: 300ms fadein 1800ms forwards;
+    @keyframes fadein {
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  &__circle--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: globals.$turquoise-primary;
+    transform: scale(0);
+    animation: appear 750ms forwards ease-in;
+    &:nth-child(2) {
+      background-color: globals.$purple-primary;
+      animation-delay: 350ms;
+    }
+    &:nth-child(3) {
+      background-color: globals.$pink-primary;
+      animation-delay: 700ms;
+    }
+    i {
+      color: white;
+      font-size: 2rem;
+    }
+    .fa-concierge-bell {
+      font-size: 3rem;
+    }
+    @keyframes appear {
+      0% {
+        transform: scale(0);
+      }
+      90% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
 header {
   .fa-chevron-left,
   .fa-chevron-left::before,
