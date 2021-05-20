@@ -99,7 +99,9 @@ footer .footer__container a {
   color: white;
 }
 
-header i {
+header i,
+header i::before,
+header i::after {
   display: none;
 }
 header .location {
