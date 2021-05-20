@@ -5,9 +5,9 @@
 //////////////////////////////////////////////////////////////////////////////
 
 header {
-  i,
-  i::before,
-  i::after {
+  .fa-chevron-left,
+  .fa-chevron-left::before,
+  .fa-chevron-left::after {
     display: none;
   }
   .location {

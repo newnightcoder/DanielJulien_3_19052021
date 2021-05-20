@@ -99,9 +99,9 @@ footer .footer__container a {
   color: white;
 }
 
-header i,
-header i::before,
-header i::after {
+header .fa-chevron-left,
+header .fa-chevron-left::before,
+header .fa-chevron-left::after {
   display: none;
 }
 header .location {
