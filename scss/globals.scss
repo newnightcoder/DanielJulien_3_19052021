@@ -1,0 +1,121 @@
+$purple-primary: #9356dc;
+$pink-primary: #ff79da;
+$turquoise-primary: #99e2d0;
+$font-title: "Shrikhand", cursive;
+$font-text: "Roboto", sans-serif;
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  min-width: 280px;
+  font-family: $font-text;
+  .body__container {
+    height: inherit;
+    width: inherit;
+    min-width: 280px;
+    position: relative;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                                HEADER
+//////////////////////////////////////////////////////////////////////////////
+
+header {
+  position: relative;
+  h1 {
+    width: 100vw;
+    min-width: 280px;
+    height: 70px;
+    font-family: $font-title;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px 10px 0;
+    box-shadow: 0 5px 5px -5px #333;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    //   border: 1px solid red;
+  }
+  .fa-chevron-left {
+    position: fixed;
+    left: 20px;
+    top: 35px;
+    transform: translateY(-50%);
+    color: black;
+    z-index: 200;
+    font-size: 1.5rem;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//                                CTA BUTTONS
+//////////////////////////////////////////////////////////////////////////////
+.cta {
+  padding: 15px 20px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  background: linear-gradient(160deg, $pink-primary, $purple-primary);
+  box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  &:hover {
+    cursor: pointer;
+  }
+}
+//////////////////////////////////////////////////////////////////////////////
+//                                FOOTER
+//////////////////////////////////////////////////////////////////////////////
+
+footer {
+  color: white;
+  background-color: rgb(39, 39, 39);
+  padding: 20px 20px 30px;
+  .footer__container {
+    height: 200px;
+    @include flex-column-center();
+    align-items: flex-start;
+    justify-content: space-evenly;
+    h2 {
+      font-family: $font-title;
+      font-size: 1.25rem;
+    }
+    a {
+      display: flex;
+      gap: 12px;
+      padding: 5px 0;
+      color: white;
+    }
+  }
+}

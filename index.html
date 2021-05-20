@@ -24,14 +24,17 @@
   </head>
   <body>
     <div class="body__container">
-      <h1>ohmyfood</h1>
+      <!--------------------------------------- HEADER --------------------------------------------->
 
       <header>
+        <h1>ohmyfood</h1>
         <div class="location">
           <i class="fas fa-map-marker-alt"></i>
           <span>Paris&comma;&nbsp;Belleville</span>
         </div>
+        <i class="fas fa-chevron-left"></i>
       </header>
+      <!--------------------------------------- HERO --------------------------------------------->
 
       <div class="hero">
         <div class="hero__text--container">
@@ -44,10 +47,12 @@
             <br />s&eacute;lectionn&eacute;s par nos soins&period;
           </p>
         </div>
-        <button class="hero__button">Explorer nos restaurants</button>
+        <button class="cta">Explorer nos restaurants</button>
       </div>
 
       <main>
+        <!--------------------------------------- INTRO --------------------------------------------->
+
         <div class="intro">
           <h2 class="intro__title">Fonctionnement</h2>
           <ul class="intro__info">
@@ -71,10 +76,17 @@
             </li>
           </ul>
         </div>
+
+        <!--------------------------------------- RESTAURANTS --------------------------------------------->
+
         <div class="restaurants">
           <h2 class="restautants__title">Restaurants</h2>
           <div class="restaurants__cards--container">
-            <a class="restaurants__card" href="#" target="_self">
+            <a
+              class="restaurants__card"
+              href="lapalettedugout.html"
+              target="_self"
+            >
               <div class="restaurants__card--img-container">
                 <img
                   src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -86,9 +98,14 @@
                 <p>M&eacute;nilmontant</p>
               </div>
               <i class="far fa-heart"></i>
+              <div class="after"></div>
               <span>Nouveau</span>
             </a>
-            <a class="restaurants__card" href="#" target="_self">
+            <a
+              class="restaurants__card"
+              href="lanoteenchantee.html"
+              target="_self"
+            >
               <div class="restaurants__card--img-container">
                 <img
                   src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -102,7 +119,11 @@
               <i class="far fa-heart"></i>
               <span>Nouveau</span>
             </a>
-            <a class="restaurants__card" href="#" target="_self">
+            <a
+              class="restaurants__card"
+              href="alafrancaise.html"
+              target="_self"
+            >
               <div class="restaurants__card--img-container">
                 <img
                   src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -115,7 +136,11 @@
               </div>
               <i class="far fa-heart"></i>
             </a>
-            <a class="restaurants__card" href="#" target="_self">
+            <a
+              class="restaurants__card"
+              href="ledelicedessens.html"
+              target="_self"
+            >
               <div class="restaurants__card--img-container">
                 <img
                   src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -131,24 +156,40 @@
           </div>
         </div>
       </main>
+    </div>
 
-      <footer>
-        <div class="footer__container">
+    <!--------------------------------------- FOOTER --------------------------------------------->
+
+    <footer>
+      <div class="footer__container">
+        <a href="#">
           <h2>ohmyfood</h2>
-          <ul>
-            <li>
+        </a>
+        <ul>
+          <li>
+            <a href="#">
               <i class="fas fa-utensils"></i>
               <p>Proposer un restaurant</p>
-            </li>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#">
               <i class="fas fa-hands-helping"></i>
               <p>Devenir partenaire</p>
-            </li>
-            <li><p>Mentions l&eacute;gales</p></li>
-            <li><p>Contact</p></li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p>Mentions l&eacute;gales</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p>Contact</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
