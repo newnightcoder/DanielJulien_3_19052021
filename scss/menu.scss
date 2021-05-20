@@ -1,0 +1,98 @@
+@use "globals";
+//////////////////////////////////////////////////////////////////////////////
+//                                HEADER IMG
+//////////////////////////////////////////////////////////////////////////////
+.body__container {
+  background-color: #efefef;
+}
+.title__img {
+  height: 300px;
+  width: 100%;
+  margin-top: 70px;
+  object-fit: cover;
+
+  img {
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #efefef;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 30px 20px 0;
+  transform: translateY(-5%);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .restaurant__title--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    .restaurant__title {
+      font-family: globals.$font-title;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    i {
+      font-size: 2rem;
+      font-weight: lighter;
+      margin-right: 30px;
+    }
+  }
+
+  .restaurant__menu {
+    @include globals.flex-column-center();
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 15px;
+    &--title {
+      text-transform: uppercase;
+      font-weight: 300;
+      position: relative;
+      padding-bottom: 8px;
+      &::after {
+        content: "";
+        height: 4px;
+        width: 50px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: globals.$turquoise-primary;
+      }
+    }
+    &--list {
+      width: 100%;
+      @include globals.flex-column-center();
+      align-items: flex-start;
+      gap: 15px;
+    }
+    &--item {
+      width: 100%;
+      background-color: white;
+      border-radius: 20px;
+      padding: 15px;
+      &--details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .cta {
+    align-self: center;
+    width: 200px;
+    font-size: 1rem;
+  }
+}
