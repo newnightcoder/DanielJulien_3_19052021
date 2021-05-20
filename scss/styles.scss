@@ -14,7 +14,7 @@
   animation: 300ms disappear 2500ms forwards;
   @include globals.flex-column-center();
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   @keyframes disappear {
     to {
       opacity: 0;
@@ -36,11 +36,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
   }
   &__circle {
-    height: 100px;
-    width: 100px;
+    height: 95px;
+    width: 95px;
     border-radius: 50%;
     display: flex;
     align-items: center;
