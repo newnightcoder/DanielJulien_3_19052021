@@ -76,12 +76,14 @@ header .fa-chevron-left {
 }
 
 footer {
-  color: white;
   background-color: #272727;
-  padding: 20px 20px 30px;
+  padding: 20px 0 30px;
 }
 footer .footer__container {
   height: 200px;
+  max-width: 600px;
+  padding: 0 30px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,16 +91,42 @@ footer .footer__container {
   justify-content: space-evenly;
 }
 footer .footer__container h2 {
+  color: white;
   font-family: "Shrikhand", cursive;
   font-size: 1.25rem;
 }
 footer .footer__container a {
+  color: white;
   display: flex;
   padding: 5px 0;
-  color: white;
 }
 footer .footer__container a > * + * {
   margin-left: 12px;
+}
+footer .footer__container .separator {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  footer .footer__container {
+    height: 100px;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+  footer .footer__container ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  footer .footer__container ul > * + * {
+    margin-left: 12px;
+  }
+  footer .footer__container ul .separator {
+    display: block;
+    margin: 0;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=globals.css.map */
