@@ -119,9 +119,12 @@ footer {
     }
     a {
       display: flex;
-      gap: 12px;
       padding: 5px 0;
       color: white;
+      // gap: 12px;
+      > * + * {
+        margin-left: 12px;
+      }
     }
   }
 }

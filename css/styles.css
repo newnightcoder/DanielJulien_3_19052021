@@ -94,9 +94,11 @@ footer .footer__container h2 {
 }
 footer .footer__container a {
   display: flex;
-  gap: 12px;
   padding: 5px 0;
   color: white;
+}
+footer .footer__container a > * + * {
+  margin-left: 12px;
 }
 
 .loader {
@@ -112,7 +114,9 @@ footer .footer__container a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+}
+.loader > * + * {
+  margin-top: 10px;
 }
 @keyframes disappear {
   to {
@@ -135,7 +139,9 @@ footer .footer__container a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+}
+.loader__circle--container > * + * {
+  margin-left: 10px;
 }
 .loader__circle {
   height: 95px;
@@ -186,24 +192,28 @@ header .location {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
   background-color: lightgray;
   padding: 15px;
+}
+header .location > * + * {
+  margin-left: 20px;
 }
 header .location:hover {
   cursor: text;
 }
 
 .hero {
-  height: 270px;
+  height: 290px;
   min-height: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  gap: 30px;
   background-color: #efefef;
   padding: 40px 0 60px;
+}
+.hero > * + * {
+  margin-top: 30px;
 }
 .hero__text--container {
   height: 100%;
@@ -220,6 +230,9 @@ header .location:hover {
   font-size: 1.2rem;
   font-weight: 300;
 }
+.hero__btn {
+  height: 100px;
+}
 
 .intro {
   height: 100%;
@@ -229,7 +242,9 @@ header .location:hover {
   align-items: center;
   align-items: flex-start;
   justify-content: space-evenly;
-  gap: 30px;
+}
+.intro > * + * {
+  margin-top: 30px;
 }
 .intro__info {
   height: 100%;
@@ -238,7 +253,9 @@ header .location:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  gap: 20px;
+}
+.intro__info > * + * {
+  margin-top: 20px;
 }
 .intro__info--item {
   width: 100%;
@@ -260,8 +277,10 @@ header .location:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 25px;
   padding-left: 10px;
+}
+.intro__info--item div > * + * {
+  margin-left: 25px;
 }
 .intro__info--item div i {
   font-size: 1.5rem;
@@ -305,7 +324,9 @@ header .location:hover {
   flex-direction: column;
   align-items: center;
   align-items: flex-start;
-  gap: 20px;
+}
+.restaurants > * + * {
+  margin-top: 20px;
 }
 .restaurants__cards--container {
   height: 100%;
@@ -313,7 +334,9 @@ header .location:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+}
+.restaurants__cards--container > * + * {
+  margin-top: 20px;
 }
 .restaurants__card {
   width: 100%;

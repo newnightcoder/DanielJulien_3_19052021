@@ -94,9 +94,11 @@ footer .footer__container h2 {
 }
 footer .footer__container a {
   display: flex;
-  gap: 12px;
   padding: 5px 0;
   color: white;
+}
+footer .footer__container a > * + * {
+  margin-left: 12px;
 }
 
 /*# sourceMappingURL=globals.css.map */
