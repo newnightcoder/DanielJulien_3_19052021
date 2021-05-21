@@ -39,8 +39,12 @@ main {
 
     .restaurant__title {
       font-family: globals.$font-title;
-      font-size: 2rem;
+      font-size: 1.5rem;
       letter-spacing: 1px;
+      white-space: nowrap;
+      @media screen and (max-width: 350px) {
+        white-space: normal;
+      }
     }
     i {
       font-size: 2rem;
@@ -76,6 +80,7 @@ main {
       gap: 15px;
     }
     &--item {
+      height: 70px;
       width: 100%;
       background-color: white;
       border-radius: 20px;
@@ -83,7 +88,32 @@ main {
       opacity: 0;
       transform: translateY(15px);
       @include globals.box-shadow();
+      position: relative;
+      overflow: hidden;
       animation: fade 1000ms forwards;
+      &:hover {
+        cursor: pointer;
+        .restaurant__menu--item--check {
+          visibility: visible;
+          transform: translateX(0);
+          i {
+            transform: rotate(360deg);
+          }
+        }
+        .restaurant__menu--item--title {
+          width: calc(30ch - 90px);
+        }
+        .restaurant__menu--item--details > span {
+          margin-right: 70px;
+        }
+      }
+      @media screen and (min-width: 450px) {
+        &:hover {
+          .restaurant__menu--item--title {
+            width: 60ch;
+          }
+        }
+      }
       &:nth-child(2) {
         animation-delay: 200ms;
       }
@@ -99,12 +129,60 @@ main {
           transform: translateY(0);
         }
       }
+
+      &--title {
+        width: 30ch;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-bottom: 1%;
+        transition: width 600ms;
+        @media screen and (min-width: 450px) {
+          width: 60ch;
+          transition: none;
+        }
+      }
       &--details {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        p {
+          width: 30ch;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-right: 15px;
+          @media screen and (min-width: 400px) {
+            width: 60ch;
+          }
+        }
         span {
           font-weight: 600;
+          margin-right: 20px;
+          transition: margin-right 550ms;
+          transition-delay: 50ms;
+        }
+      }
+      &--check {
+        height: 100%;
+        width: 70px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: globals.$turquoise-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 600ms;
+
+        i {
+          color: white;
+          font-size: 2rem;
+          transform: rotate(0);
+          transition: transform 600ms;
         }
       }
     }
