@@ -110,7 +110,7 @@ footer .footer__container .separator {
   footer .footer__container {
     height: 100px;
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     align-items: center;
   }
   footer .footer__container ul {
@@ -118,6 +118,7 @@ footer .footer__container .separator {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 10px;
   }
   footer .footer__container ul > * + * {
     margin-left: 12px;

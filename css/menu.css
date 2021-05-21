@@ -110,7 +110,7 @@ footer .footer__container .separator {
   footer .footer__container {
     height: 100px;
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     align-items: center;
   }
   footer .footer__container ul {
@@ -118,6 +118,7 @@ footer .footer__container .separator {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 10px;
   }
   footer .footer__container ul > * + * {
     margin-left: 12px;
@@ -227,12 +228,18 @@ main .restaurant__menu--item {
   padding: 15px;
   opacity: 0;
   transform: translateY(15px);
+  position: relative;
+  overflow: hidden;
   box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-  position: relative;
-  overflow: hidden;
-  animation: fade 1000ms forwards;
+  animation: fade-in 1000ms forwards;
+}
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 main .restaurant__menu--item:hover {
   cursor: pointer;
@@ -263,12 +270,6 @@ main .restaurant__menu--item:nth-child(3) {
 }
 main .restaurant__menu--item:nth-child(4) {
   animation-delay: 600ms;
-}
-@keyframes fade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 main .restaurant__menu--item--title {
   width: 30ch;

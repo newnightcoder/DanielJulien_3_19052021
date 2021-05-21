@@ -4,6 +4,16 @@ $turquoise-primary: #99e2d0;
 $font-title: "Shrikhand", cursive;
 $font-text: "Roboto", sans-serif;
 
+@mixin fade-in-animation {
+  animation: fade-in 1000ms forwards;
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 @mixin flex-column-center {
   display: flex;
   flex-direction: column;
@@ -136,13 +146,14 @@ footer {
     @media screen and (min-width: 768px) {
       height: 100px;
       width: 100%;
-      max-width: 100%;
+      max-width: 1200px;
       align-items: center;
       ul {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin-top: 10px;
         > * + * {
           margin-left: 12px;
         }

@@ -1,7 +1,7 @@
 @use "globals";
 
 //////////////////////////////////////////////////////////////////////////////
-//                                 HEADER
+//                                 LOADER
 //////////////////////////////////////////////////////////////////////////////
 .loader {
   position: fixed;
@@ -83,6 +83,11 @@
     }
   }
 }
+
+//////////////////////////////////////////////////////////////////////////////
+//                                 HEADER
+//////////////////////////////////////////////////////////////////////////////
+
 header {
   .fa-chevron-left,
   .fa-chevron-left::before,
@@ -163,7 +168,7 @@ header {
   margin: 0 auto;
   // gap: 30px;
   > * + * {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   &__info {
@@ -187,7 +192,11 @@ header {
       white-space: nowrap;
       padding: 30px;
       position: relative;
+      opacity: 0;
+      transform: translateY(20px);
       @include globals.box-shadow();
+      @include globals.fade-in-animation();
+      animation-delay: 2500ms;
       div {
         width: 100%;
         display: flex;
@@ -220,16 +229,21 @@ header {
         transform: translateX(-50%);
       }
     }
-    &--item:nth-child(2)::before {
-      content: "2";
-    }
-    &--item:nth-child(3)::before {
-      content: "3";
+
+    &--item:nth-child(2) {
+      animation-delay: 2700ms;
+      &::before {
+        content: "2";
+      }
     }
     &--item:nth-child(3) {
+      animation-delay: 2900ms;
       background-color: #e6e6fa;
       i {
         color: globals.$purple-primary;
+      }
+      &::before {
+        content: "3";
       }
     }
   }
@@ -252,7 +266,7 @@ header {
     @include globals.flex-column-center();
     align-items: flex-start;
     > * + * {
-      margin-top: 20px;
+      margin-top: 25px;
     }
   }
 
