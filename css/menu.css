@@ -12,7 +12,7 @@ html {
 
 body {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   min-width: 280px;
   font-family: "Roboto", sans-serif;
 }
@@ -70,9 +70,11 @@ header .fa-chevron-left {
   box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  transition: transform 200ms;
 }
 .cta:hover {
   cursor: pointer;
+  transform: scale(0.98);
 }
 
 footer {
@@ -146,9 +148,9 @@ footer .footer__container .separator {
   object-fit: cover;
 }
 
-main {
+.restaurant {
   width: 100%;
-  max-width: 500px;
+  max-width: 1100px;
   margin: 0 auto;
   background-color: #efefef;
   border-top-left-radius: 50px;
@@ -158,50 +160,76 @@ main {
   display: flex;
   flex-direction: column;
 }
-main > * + * {
+.restaurant > * + * {
   margin-top: 30px;
 }
-main .restaurant__title--container {
+@media screen and (min-width: 768px) {
+  .restaurant {
+    padding-bottom: 30px;
+  }
+  .restaurant .restaurant__title--container {
+    justify-content: center;
+  }
+}
+.restaurant__title--container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .restaurant__title--container > * + * {
+.restaurant__title--container > * + * {
   margin-left: 30px;
 }
-main .restaurant__title--container .restaurant__title {
+.restaurant__title--container__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   letter-spacing: 1px;
   white-space: nowrap;
 }
 @media screen and (max-width: 350px) {
-  main .restaurant__title--container .restaurant__title {
+  .restaurant__title--container__title {
     white-space: normal;
   }
 }
-main .restaurant__title--container i {
-  font-size: 2rem;
-  font-weight: lighter;
+.restaurant__title--container__icon-container {
   margin-right: 30px;
 }
-main .restaurant__menu {
+.restaurant__title--container__icon-container i {
+  font-size: 50px;
+}
+.restaurant__title--container__icon-container i:hover {
+  cursor: pointer;
+}
+.restaurant__menu--container > * + * {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1200px) and (orientation: landscape) {
+  .restaurant__menu--container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .restaurant__menu--container > * + * {
+    margin-top: 0;
+  }
+}
+.restaurant__menu {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-items: flex-start;
   padding-bottom: 15px;
 }
-main .restaurant__menu > * + * {
+.restaurant__menu > * + * {
   margin-top: 20px;
 }
-main .restaurant__menu--title {
+.restaurant__menu--title {
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
   padding-bottom: 8px;
 }
-main .restaurant__menu--title::after {
+.restaurant__menu--title::after {
   content: "";
   height: 4px;
   width: 50px;
@@ -210,17 +238,17 @@ main .restaurant__menu--title::after {
   bottom: 0;
   background-color: #99e2d0;
 }
-main .restaurant__menu--list {
+.restaurant__menu--list {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-items: flex-start;
 }
-main .restaurant__menu--list > * + * {
+.restaurant__menu--list > * + * {
   margin-top: 15px;
 }
-main .restaurant__menu--item {
+.restaurant__menu--item {
   height: 70px;
   width: 100%;
   background-color: white;
@@ -241,74 +269,61 @@ main .restaurant__menu--item {
     transform: translateY(0);
   }
 }
-main .restaurant__menu--item:hover {
+.restaurant__menu--item:hover {
   cursor: pointer;
 }
-main .restaurant__menu--item:hover .restaurant__menu--item--check {
+.restaurant__menu--item:hover .restaurant__menu--item--check {
   visibility: visible;
   transform: translateX(0);
 }
-main .restaurant__menu--item:hover .restaurant__menu--item--check i {
+.restaurant__menu--item:hover .restaurant__menu--item--check i {
   transform: rotate(360deg);
 }
-main .restaurant__menu--item:hover .restaurant__menu--item--title {
-  width: calc(30ch - 90px);
+.restaurant__menu--item:hover .restaurant__menu--item--title {
+  width: calc(100% - 100px);
 }
-main .restaurant__menu--item:hover .restaurant__menu--item--details > span {
-  margin-right: 70px;
+.restaurant__menu--item:hover .restaurant__menu--item--details p {
+  width: calc(100% - 140px);
 }
-@media screen and (min-width: 450px) {
-  main .restaurant__menu--item:hover .restaurant__menu--item--title {
-    width: 60ch;
-  }
+.restaurant__menu--item:hover .restaurant__menu--item--details span {
+  transform: translateX(-70px);
 }
-main .restaurant__menu--item:nth-child(2) {
+.restaurant__menu--item:nth-child(2) {
   animation-delay: 200ms;
 }
-main .restaurant__menu--item:nth-child(3) {
+.restaurant__menu--item:nth-child(3) {
   animation-delay: 400ms;
 }
-main .restaurant__menu--item:nth-child(4) {
+.restaurant__menu--item:nth-child(4) {
   animation-delay: 600ms;
 }
-main .restaurant__menu--item--title {
-  width: 30ch;
+.restaurant__menu--item--title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-bottom: 1%;
   transition: width 600ms;
 }
-@media screen and (min-width: 450px) {
-  main .restaurant__menu--item--title {
-    width: 60ch;
-    transition: none;
-  }
-}
-main .restaurant__menu--item--details {
+.restaurant__menu--item--details {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .restaurant__menu--item--details p {
-  width: 30ch;
+.restaurant__menu--item--details p {
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-right: 15px;
+  transition: width 600ms;
 }
-@media screen and (min-width: 400px) {
-  main .restaurant__menu--item--details p {
-    width: 60ch;
-  }
-}
-main .restaurant__menu--item--details span {
+.restaurant__menu--item--details span {
   font-weight: 600;
-  margin-right: 20px;
-  transition: margin-right 550ms;
+  margin-right: 10px;
+  transition: transform 550ms;
   transition-delay: 50ms;
 }
-main .restaurant__menu--item--check {
+.restaurant__menu--item--check {
   height: 100%;
   width: 70px;
   border-top-right-radius: 20px;
@@ -322,14 +337,15 @@ main .restaurant__menu--item--check {
   top: 0;
   transform: translateX(100%);
   transition: transform 600ms;
+  visibility: hidden;
 }
-main .restaurant__menu--item--check i {
+.restaurant__menu--item--check i {
   color: white;
   font-size: 2rem;
   transform: rotate(0);
   transition: transform 600ms;
 }
-main .cta {
+.restaurant .cta {
   align-self: center;
   width: 200px;
   font-size: 1rem;

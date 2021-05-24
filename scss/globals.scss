@@ -40,9 +40,10 @@ html {
 
 body {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   min-width: 280px;
   font-family: $font-text;
+
   .body__container {
     height: inherit;
     width: inherit;
@@ -103,11 +104,11 @@ header {
   font-size: 1rem;
   letter-spacing: 0.5px;
   background: linear-gradient(160deg, $pink-primary, $purple-primary);
-  box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-  -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-  -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
+  @include box-shadow();
+  transition: transform 200ms;
   &:hover {
     cursor: pointer;
+    transform: scale(0.98);
   }
 }
 //////////////////////////////////////////////////////////////////////////////
