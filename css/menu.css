@@ -179,24 +179,21 @@ footer .footer__container .separator {
 .restaurant__title--container > * + * {
   margin-left: 30px;
 }
-.restaurant__title--container__title {
+.restaurant__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   letter-spacing: 1px;
   white-space: nowrap;
 }
 @media screen and (max-width: 350px) {
-  .restaurant__title--container__title {
+  .restaurant__title {
     white-space: normal;
   }
 }
-.restaurant__title--container__icon-container {
-  margin-right: 30px;
+.restaurant i {
+  font-size: 30px;
 }
-.restaurant__title--container__icon-container i {
-  font-size: 50px;
-}
-.restaurant__title--container__icon-container i:hover {
+.restaurant i:hover {
   cursor: pointer;
 }
 .restaurant__menu--container > * + * {

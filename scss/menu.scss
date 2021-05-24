@@ -48,28 +48,25 @@
     > * + * {
       margin-left: 30px;
     }
-
-    &__title {
-      font-family: globals.$font-title;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-      white-space: nowrap;
-      @media screen and (max-width: 350px) {
-        white-space: normal;
-      }
-    }
-    &__icon-container {
-      margin-right: 30px;
-      i {
-        font-size: 50px;
-        // height: 30px;
-        // width: 30px;
-        &:hover {
-          cursor: pointer;
-        }
-      }
+  }
+  &__title {
+    font-family: globals.$font-title;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    @media screen and (max-width: 350px) {
+      white-space: normal;
     }
   }
+  // &__icon-container {
+  // margin-right: 30px;
+  i {
+    font-size: 30px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  // }
   &__menu--container {
     > * + * {
       margin-top: 30px;
