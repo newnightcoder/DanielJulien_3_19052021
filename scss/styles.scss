@@ -185,7 +185,7 @@ header {
     &--item {
       width: calc(100% - 12.5px);
       min-width: 280px;
-      max-width: 800px;
+      max-width: 750px;
       border-radius: 30px;
       background-color: #efefef;
       display: flex;
@@ -248,7 +248,7 @@ header {
         content: "3";
       }
     }
-    @media screen and(min-width:800px) {
+    @media screen and(min-width:750px) {
       align-items: center;
     }
     @media screen and (min-width: 1024px) {
