@@ -11,7 +11,7 @@
   overflow: hidden;
   z-index: 200;
   background-color: rgba(0, 0, 0, 0.8);
-  animation: 300ms disappear 4000ms forwards;
+  animation: 300ms disappear 3500ms forwards;
   @include globals.flex-column-center();
   justify-content: center;
   // gap: 10px;
@@ -29,7 +29,7 @@
     font-size: 3rem;
     color: white;
     opacity: 0;
-    animation: 300ms fadein 1800ms forwards;
+    animation: 150ms fadein 1600ms forwards;
     @keyframes fadein {
       to {
         opacity: 1;
