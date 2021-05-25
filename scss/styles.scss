@@ -10,8 +10,8 @@
   height: 100%;
   overflow: hidden;
   z-index: 200;
-  background-color: lightgray;
-  animation: 300ms disappear 2500ms forwards;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: 300ms disappear 4000ms forwards;
   @include globals.flex-column-center();
   justify-content: center;
   // gap: 10px;
@@ -27,6 +27,7 @@
   &__title {
     font-family: globals.$font-title;
     font-size: 3rem;
+    color: white;
     opacity: 0;
     animation: 300ms fadein 1800ms forwards;
     @keyframes fadein {
@@ -41,7 +42,7 @@
     justify-content: center;
     // gap: 10px;
     > * + * {
-      margin-left: 10px;
+      margin-left: 15px;
     }
   }
   &__circle {
@@ -196,11 +197,11 @@ header {
       white-space: nowrap;
       padding: 30px;
       position: relative;
-      opacity: 0;
+      // opacity: 0;
       transform: translateY(20px);
       @include globals.box-shadow();
-      @include globals.fade-in-animation();
-      animation-delay: 2500ms;
+      // @include globals.fade-in-animation();
+      // animation-delay: 2500ms;
       div {
         width: 100%;
         display: flex;
@@ -347,8 +348,20 @@ header {
       right: 30px;
       bottom: 30px;
       font-size: 1.5rem;
-      z-index: 20;
-      color: black;
+      &::before {
+        background: globals.$btn-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-color: transparent;
+        transition: all 400ms;
+      }
+      &:hover:before {
+        color: transparent;
+        background: globals.$btn-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-weight: 900;
+      }
     }
     span {
       position: absolute;

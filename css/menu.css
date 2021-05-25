@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -190,11 +191,28 @@ footer .footer__container .separator {
     white-space: normal;
   }
 }
-.restaurant i {
+.restaurant__icon-container {
+  font-family: "Font Awesome 5 Free";
   font-size: 30px;
+  height: 30px;
+  width: 30px;
+  background: linear-gradient(160deg, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-.restaurant i:hover {
+.restaurant__icon-container::before {
+  content: "";
+  transition: all 400ms;
+}
+.restaurant__icon-container:hover {
   cursor: pointer;
+}
+.restaurant__icon-container:hover::before {
+  color: transparent;
+  background: linear-gradient(160deg, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 900;
 }
 .restaurant__menu--container > * + * {
   margin-top: 30px;

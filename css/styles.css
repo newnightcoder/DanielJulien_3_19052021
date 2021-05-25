@@ -139,8 +139,8 @@ footer .footer__container .separator {
   height: 100%;
   overflow: hidden;
   z-index: 200;
-  background-color: lightgray;
-  animation: 300ms disappear 2500ms forwards;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: 300ms disappear 4000ms forwards;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,6 +158,7 @@ footer .footer__container .separator {
 .loader__title {
   font-family: "Shrikhand", cursive;
   font-size: 3rem;
+  color: white;
   opacity: 0;
   animation: 300ms fadein 1800ms forwards;
 }
@@ -172,7 +173,7 @@ footer .footer__container .separator {
   justify-content: center;
 }
 .loader__circle--container > * + * {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .loader__circle {
   height: 95px;
@@ -311,19 +312,10 @@ header .location:hover {
   white-space: nowrap;
   padding: 30px;
   position: relative;
-  opacity: 0;
   transform: translateY(20px);
   box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-  animation: fade-in 1000ms forwards;
-  animation-delay: 2500ms;
-}
-@keyframes fade-in {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 .intro__info--item div {
   width: 100%;
@@ -471,8 +463,20 @@ header .location:hover {
   right: 30px;
   bottom: 30px;
   font-size: 1.5rem;
-  z-index: 20;
-  color: black;
+}
+.restaurants__card i::before {
+  background: linear-gradient(160deg, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: transparent;
+  transition: all 400ms;
+}
+.restaurants__card i:hover:before {
+  color: transparent;
+  background: linear-gradient(160deg, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 900;
 }
 .restaurants__card span {
   position: absolute;

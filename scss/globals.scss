@@ -1,6 +1,7 @@
 $purple-primary: #9356dc;
 $pink-primary: #ff79da;
 $turquoise-primary: #99e2d0;
+$btn-gradient: linear-gradient(160deg, $pink-primary, $purple-primary);
 $font-title: "Shrikhand", cursive;
 $font-text: "Roboto", sans-serif;
 
@@ -103,7 +104,7 @@ header {
   color: white;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  background: linear-gradient(160deg, $pink-primary, $purple-primary);
+  background: $btn-gradient;
   @include box-shadow();
   transition: transform 200ms;
   &:hover {
