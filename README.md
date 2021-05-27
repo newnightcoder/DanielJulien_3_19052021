@@ -7,7 +7,7 @@ For this early version of the project, the website offers to book and select you
 
 This project uses HTML and SASS.
 
-### To do list:
+### <u>To do list</u>:
 
 - navigation between 1 homepage and 4 menu pages
 - implement CSS loader on page load (no JavaScript)
@@ -17,7 +17,7 @@ This project uses HTML and SASS.
   - list items on the menus (on hover / on load)
 - responsiveness (tablets/desktop)
 
-### Learning topics:
+### <u>Learning topics</u>:
 
 - website navigation
 - mobile first design implementation
