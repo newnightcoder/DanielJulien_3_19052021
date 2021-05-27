@@ -70,11 +70,14 @@ header .fa-chevron-left {
   box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -webkit-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
   -moz-box-shadow: -1px 10px 5px 0px rgba(74, 74, 74, 0.24);
-  transition: transform 200ms;
+  transition: all 200ms;
 }
 .cta:hover {
   cursor: pointer;
   transform: scale(0.98);
+  box-shadow: -1px 5px 5px 0px rgba(74, 74, 74, 0.24);
+  -webkit-box-shadow: -1px 5px 5px 0px rgba(74, 74, 74, 0.24);
+  -moz-box-shadow: -1px 5px 5px 0px rgba(74, 74, 74, 0.24);
 }
 
 svg {
