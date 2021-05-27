@@ -60,26 +60,14 @@
   }
 
   &__icon-container {
-    font-family: "Font Awesome 5 Free";
-    font-size: 30px;
     height: 30px;
     width: 30px;
-    background: globals.$btn-gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    &::before {
-      content: "\f004";
-      transition: all 400ms;
-    }
-    &:hover {
-      cursor: pointer;
-      &::before {
-        color: transparent;
-        background: globals.$btn-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        font-weight: 900;
+    position: relative;
+    svg {
+      top: 5%;
+      left: 0;
+      &:hover {
+        cursor: pointer;
       }
     }
   }
