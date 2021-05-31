@@ -106,13 +106,15 @@ header {
   letter-spacing: 0.5px;
   background: $btn-gradient;
   @include box-shadow();
-  transition: all 200ms;
+  filter: brightness(100%);
+  transition: all 300ms;
   &:hover {
     cursor: pointer;
     transform: scale(1.01);
     box-shadow: -1px 15px 5px 0px rgba(74, 74, 74, 0.24);
     -webkit-box-shadow: -1px 15px 5px 0px rgba(74, 74, 74, 0.24);
     -moz-box-shadow: -1px 15px 5px 0px rgba(74, 74, 74, 0.24);
+    filter: brightness(110%);
   }
 }
 
