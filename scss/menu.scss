@@ -142,11 +142,11 @@
           }
         }
         .restaurant__menu--item--title {
-          width: calc(100% - 80px);
+          width: calc(100% - 130px);
         }
         .restaurant__menu--item--details {
           p {
-            width: calc(100% - 120px);
+            width: calc(100% - 100px);
           }
           span {
             transform: translateX(-70px);
@@ -177,6 +177,7 @@
         justify-content: space-between;
         p {
           width: 100%;
+          font-size: 0.85rem;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -185,7 +186,6 @@
         }
         span {
           font-weight: 600;
-          margin-right: 10px;
           transition: transform 550ms;
           transition-delay: 50ms;
         }

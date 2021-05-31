@@ -109,10 +109,10 @@ header {
   transition: all 200ms;
   &:hover {
     cursor: pointer;
-    transform: scale(0.98);
-    box-shadow: -1px 5px 5px 0px rgba(74, 74, 74, 0.24);
-    -webkit-box-shadow: -1px 5px 5px 0px rgba(74, 74, 74, 0.24);
-    -moz-box-shadow: -1px 5px 5px 0px rgba(74, 74, 74, 0.24);
+    transform: scale(1.01);
+    box-shadow: -1px 15px 5px 0px rgba(74, 74, 74, 0.24);
+    -webkit-box-shadow: -1px 15px 5px 0px rgba(74, 74, 74, 0.24);
+    -moz-box-shadow: -1px 15px 5px 0px rgba(74, 74, 74, 0.24);
   }
 }
 
@@ -129,16 +129,20 @@ svg {
     transition: opacity 500ms;
   }
 }
-#heart-solid path {
-  opacity: 0;
+
+.heart-solid {
+  path {
+    opacity: 0;
+  }
 }
-#heart-regular {
+
+.heart-regular {
   z-index: 10;
   &:hover {
     path {
       opacity: 0;
     }
-    + #heart-solid path {
+    + .heart-solid path {
       opacity: 1;
     }
   }
