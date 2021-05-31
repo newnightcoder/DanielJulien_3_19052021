@@ -142,7 +142,7 @@
           }
         }
         .restaurant__menu--item--title {
-          width: calc(100% - 130px);
+          width: calc(100% - 125px);
         }
         .restaurant__menu--item--details {
           p {
@@ -165,6 +165,7 @@
       }
 
       &--title {
+        width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
